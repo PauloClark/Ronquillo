@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronquillo Family Tree</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Ronquillo Family Tree</h1>
+</header>
+
+
+
+<!-- Siblings and children -->
+<section class="family-tree-container">
+
+    <!-- Hector Ronquillo -->
+    <div class="sibling-column">
+        <div class="sibling-card" onclick="showInfo('hector')">
+            <img src="images/hector.jpg" alt="Hector Ronquillo">
+            <h3>Hector Ronquillo</h3>
+            <p><strong>Lotto Tipster</strong></p>
+        </div>
+        <div class="children-line"></div>
+        <div class="children-list">
+            <p><strong>Son(s)/Daughter(s):</strong></p>
+            <p>Ian Mark Ronquillo</p>
+            <p>Queeny Joy Ronquillo</p>
+            <p>Stella Marie Ronquillo</p>
+            <p>Jun Jun Ronquillo</p>
+        </div>
+    </div>
+
+    <!-- Joelinda Jimenez -->
+    <div class="sibling-column">
+        <div class="sibling-card" onclick="showInfo('joelinda')">
+            <img src="images/joelinda.jpg" alt="Joelinda Jimenez">
+            <h3>Joelinda Jimenez</h3>
+            <p><strong>Housewife</strong></p>
+        </div>
+        <div class="children-line"></div>
+        <div class="children-list">
+            <p><strong>Son(s)/Daughter(s):</strong></p>
+            <p>Edward Jimenez</p>
+            <p>Joed Jimenez</p>
+            <p>Catherine Jimenez</p>
+        </div>
+    </div>
+
+    <!-- Hermilito Ronquillo -->
+    <div class="sibling-column">
+        <div class="sibling-card" onclick="showInfo('hermilito')">
+            <img src="images/hermilito.jpg" alt="Hermilito Ronquillo">
+            <h3>Hermilito Ronquillo</h3>
+            <p><strong>Police Retired</strong></p>
+        </div>
+        <div class="children-line"></div>
+        <div class="children-list">
+            <p><strong>Son(s)/Daughter(s):</strong></p>
+            <p>Justine Ronquillo</p>
+            <p>Jessa Ronquillo</p>
+            <p>Jude Ronquillo</p>
+        </div>
+    </div>
+
+    <!-- Jovelyn Buslanganon -->
+    <div class="sibling-column">
+        <div class="sibling-card" onclick="showInfo('jovelyn')">
+            <img src="images/jovelyn.jpg" alt="Jovelyn Buslanganon">
+            <h3>Jovelyn Buslanganon</h3>
+            <p><strong>Med Wife</strong></p>
+        </div>
+        <div class="children-line"></div>
+        <div class="children-list">
+            <p><strong>Son(s)/Daughter(s):</strong></p>
+            <p>Irish Jane Buslanganon</p>
+            <p>Jana Roelah Buslanganon</p>
+            <p>Rhea April Buslanganon</p>
+        </div>
+    </div>
+
+    <!-- Gina Calitas -->
+    <div class="sibling-column">
+        <div class="sibling-card" onclick="showInfo('gina')">
+            <img src="images/gina.jpg" alt="Gina Calitas">
+            <h3>Gina Calitas</h3>
+            <p><strong>Agriculturist</strong></p>
+        </div>
+        <div class="children-line"></div>
+        <div class="children-list">
+            <p><strong>Son(s)/Daughter(s):</strong></p>
+            <p>Romel Calitas</p>
+            <p>Rowela Calitas</p>
+            <p>John Gabriel Calitas</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- POPUP MODAL -->
+<div id="infoBox" class="popup">
+    <div class="popup-content">
+        <span onclick="closeInfo()" class="close">&times;</span>
+        <h2 id="name"></h2>
+        <p id="details"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

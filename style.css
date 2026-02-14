@@ -1,0 +1,177 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #000000; /* main black background */
+    color: #ffffff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Decorative side stripes */
+body::before, body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 0;
+}
+
+body::before {
+    left: 0;
+    background: linear-gradient(180deg, #ff4d4d, #ffb84d, #ffff4d, #4dff4d, #4dffff);
+    opacity: 0.1; /* subtle */
+}
+
+body::after {
+    right: 0;
+    background: linear-gradient(180deg, #4d4dff, #b84dff, #ff4dff, #ff4d4d);
+    opacity: 0.1; /* subtle */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 2px solid #444;
+    z-index: 1;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Container */
+.family-tree-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px 20px;
+    z-index: 1;
+    position: relative;
+}
+
+/* Each sibling column */
+.sibling-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Sibling card */
+.sibling-card {
+    background: #1a1a1a; /* dark card */
+    border-radius: 12px;
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+}
+
+.sibling-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.2);
+}
+
+/* Rainbow border on images */
+.sibling-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 4px; /* space for gradient */
+    background: conic-gradient(red, orange, yellow, green, blue, indigo, violet, red);
+    margin-bottom: 10px;
+}
+
+/* Text inside cards */
+.sibling-card h3 {
+    margin: 5px 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.sibling-card p {
+    margin: 5px 0;
+    font-size: 0.95em;
+    color: #cccccc;
+}
+
+/* Connecting line to children */
+.children-line {
+    width: 2px;
+    height: 25px;
+    background: #ffffff;
+    margin: 8px 0;
+}
+
+/* Children list */
+.children-list {
+    text-align: center;
+    background: #1a1a1a; /* dark card */
+    padding: 8px 10px;
+    border-radius: 8px;
+    min-width: 180px;
+}
+
+.children-list p:first-child {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #ffffff;
+}
+
+.children-list p:not(:first-child) {
+    margin: 2px 0;
+    font-weight: 400;
+    color: #cccccc;
+}
+
+/* Popup Modal */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 999;
+}
+
+.popup-content {
+    background: #1a1a1a;
+    color: #ffffff;
+    width: 350px;
+    margin: 8% auto;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 1.6;
+    box-shadow: 0 10px 25px rgba(255,255,255,0.2);
+}
+
+.popup-content h2 {
+    margin-bottom: 15px;
+}
+
+.popup-content p {
+    font-size: 1em;
+    line-height: 1.7;
+}
+
+.close {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ff3333;
+}
